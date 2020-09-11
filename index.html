@@ -3,7 +3,17 @@
 <head>
 	<title>javascript calculator </title>
 <style>
+	body{
+		background: cyan;
+	}
 
+	.tabledark{
+		background-color: white;border: 20px solid white;
+	}
+
+    .darkmode{
+    background: black; 
+    }
 
 	table{
 		background: grey;width: 450px;height: 400px;top: 50%;left: 50%;transform: translate(-50%,-50%);position: absolute;border:20px solid grey;border-radius: 10px;
@@ -27,6 +37,8 @@ width:98%;height: 100%;font-size: 40px;outline: thick;
 </style>
 </head>
 <body>
+
+	<button onclick="fun()">toggle dark mode</button>
 
 <!-- create table design for calculator -->
 <table border="5">
@@ -83,6 +95,17 @@ function clr()
 {
 document.getElementById("edu").value = ""
 }
+</script>
+
+<!-- script for toggle function -->
+<script>
+	function fun(){
+		k = document.body;
+		a = document.querySelector("table");
+      a.classList.toggle("tabledark");
+      k.classList.toggle("darkmode");
+	}
+	
 </script>
 </body>
 </html>
